@@ -43,7 +43,7 @@ else
     CUDA_VISIBLE_DEVICES=$GPU_ID python main.py --input_file preprocess/$DIRNAME/image.png \
                                                 --output_pcd output/$DIRNAME/pcd.ply \
                                                 --save_mesh \
-                                                --output_mesh output/$DIRNAME/mesh/mesh.ply
+                                                --output_mesh output/$DIRNAME/mesh.ply
 fi
 
 
