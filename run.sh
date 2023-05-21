@@ -36,7 +36,7 @@ python rgba_to_rgb_mask.py --input_file input/$DIRNAME/$INPUT_FILE --output_dir 
 mv tmp/$DIRNAME/$ORG_INPUT_FILE input/$DIRNAME/$ORG_INPUT_FILE
 rm -f input/$DIRNAME/image.png
 
-if [ "$SAVE_MESH" == "yes" ]; then
+if [ "$SAVE_MESH" == "no" ]; then
     CUDA_VISIBLE_DEVICES=$GPU_ID python main.py --input_file preprocess/$DIRNAME/image.png \
                                                 --output_pcd output/$DIRNAME/pcd.ply
 else

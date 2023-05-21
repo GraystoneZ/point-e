@@ -55,7 +55,8 @@ def main(raw_args=None):
     for x in tqdm(sampler.sample_batch_progressive(batch_size=1, model_kwargs=dict(images=[img]))):
         samples = x
     pc = sampler.output_to_point_clouds(samples)[0]
-    pc.write_ply(args.output_pcd)
+    with open(args.output_pcd, "wb") as f:
+        pc.write_ply(f)
 
     if args.save_mesh:
         print('creating SDF model...')
