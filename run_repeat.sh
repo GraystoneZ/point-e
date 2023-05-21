@@ -4,5 +4,5 @@ DIRNAMES=("obj_hedgehog_2" "obj_shoe_2" "obj_lion_statue_1" "obj_buddha_1" "obj_
 
 for i in {0..19}
 do
-    bash run.sh 3 ${DIRNAMES[i]} no
+    bash run.sh 0 ${DIRNAMES[i]} no
 done

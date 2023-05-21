@@ -1,8 +1,8 @@
 #!bin/bash
 
-GPU_ID=$0
-DIRNAME=$1
-SAVE_MESH=$2
+GPU_ID=$1
+DIRNAME=$2
+SAVE_MESH=$3
 
 mkdir -p preprocess/$DIRNAME
 mkdir -p output/$DIRNAME
@@ -10,7 +10,7 @@ set -e
 exec > >(tee "output/$DIRNAME/output.log") 2>&1
 
 echo "Running Point-E"
-echo "GPU_ID=$1, DIRNAME=$2, INITIALIZER_TOKEN=$3, POSE=$4"
+echo "GPU_ID=$1, DIRNAME=$2, SAVE_MESH=$3"
 
 START=`date +%s`
 
